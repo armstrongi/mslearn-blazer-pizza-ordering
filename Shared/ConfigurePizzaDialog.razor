@@ -17,7 +17,7 @@
                         step="1" @bind="Pizza.Size" @bind:event="oninput" />
                 }
                 <span class="size-label">
-                    @(Pizza.Size)" (£@(Pizza.GetFormattedTotalPrice()))
+                    @(Pizza.Size)" ($@(Pizza.GetFormattedTotalPrice()))
                 </span>
             </div>
         </form>

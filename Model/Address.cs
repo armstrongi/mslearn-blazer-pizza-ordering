@@ -23,5 +23,11 @@ namespace BlazingPizza
 
         [Required, RegularExpression(@"^([0-9]{4})$", ErrorMessage = "Please use a valid Postal Code with four numbers.")]
         public string PostalCode { get; set; }
+
+        public string GetAddress()
+        {
+            return $"{Name}, {Line1}, {(string.IsNullOrEmpty(Line2) ? "" : Line2 + ", ") }{Suburb}, {State} {PostalCode}";
+        }
+        
     }
 }

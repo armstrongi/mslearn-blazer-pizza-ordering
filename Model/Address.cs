@@ -26,7 +26,7 @@ namespace BlazingPizza
 
         public string GetAddress()
         {
-            return $"{Name}, {Line1}, {(string.IsNullOrEmpty(Line2) ? "" : Line2 + ", ") }{Suburb}, {State} {PostalCode}";
+            return $"{Name}{Environment.NewLine}{Line1}{Environment.NewLine}{(string.IsNullOrEmpty(Line2) ? "" : Line2 + Environment.NewLine)}{Suburb}{Environment.NewLine}{State} {PostalCode}";
         }
         
     }

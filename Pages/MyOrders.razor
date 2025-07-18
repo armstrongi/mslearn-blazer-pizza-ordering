@@ -26,7 +26,9 @@
                         <strong>@context.Order.Pizzas.Count</strong>                                                
                     </div>
                     <div class="col">   
-                        Delivery Details: <strong>@(context.Order.DeliveryAddress.GetAddress())</strong>
+                        Delivery Details:
+                        <br /> 
+                        <strong>@((MarkupString)context.Order.DeliveryAddress.GetAddress().Replace(Environment.NewLine, "<br />"))</strong>
                     </div>
                     <div class="col">
                         Status: <strong>@context.StatusText</strong>
